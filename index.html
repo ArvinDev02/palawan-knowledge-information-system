@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCSD E-Library — Palawan Council for Sustainable Development</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pcsd-styles.css">
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<nav class="site-nav" id="site-nav">
+  <div class="nav-inner">
+    <div class="nav-logo" data-page="home">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+        <path d="M20 2L35 15H5L20 2Z" fill="#1A4F8A"/>
+        <path d="M20 15L28 22H12L20 15Z" fill="#2A7A35"/>
+        <circle cx="20" cy="28" r="3" fill="#7B3F1A"/>
+        <circle cx="20" cy="28" r="1.5" fill="#D4920A"/>
+      </svg>
+      <div class="nav-logo-text">
+        <span class="nav-title">PCSD E-Library</span>
+        <span class="nav-sub">REPUBLIC OF THE PHILIPPINES
+</span>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#" class="nav-link active" data-page="home">Home</a>
+      <a href="#" class="nav-link" data-page="about">About</a>
+      <a href="#" class="nav-link" data-page="books">Publication</a>
+      <a href="#" class="nav-link" data-page="contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-icon-btn" data-page="books" title="Search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+      </button>
+      <button class="nav-icon-btn" data-page="dashboard" title="My Library">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+        </svg>
+      </button>
+      <button class="btn-primary btn-compact" id="login-nav-btn" data-page="account">Login</button>
+    </div>
+    <button class="hamburger" id="hamburger">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#" class="nav-link" data-page="home">Home</a>
+    <a href="#" class="nav-link" data-page="about">About</a>
+    <a href="#" class="nav-link" data-page="books">Browse Books</a>
+    <a href="#" class="nav-link" data-page="contact">Contact</a>
+    <a href="#" class="nav-link" data-page="dashboard">My Library</a>
+  </div>
+</nav>
+
+<!-- ============ PAGES ============ -->
+
+<!-- PAGE 1: HOME -->
+<div id="page-home" class="page active" data-screen-label="Home">
+  <section class="hero">
+    <span class="hero-pill">5000+ RESOURCES AVAILABLE</span>
+    <h1>Access Government Knowledge Online</h1>
+    <p class="hero-sub">Free, trusted digital publications from the Palawan Council for Sustainable Development and partner agencies. Browse, read, and download.</p>
+    <div class="hero-search">
+      <input type="text" id="hero-search" placeholder="Search books, publications, topics..." />
+      <button class="hero-search-btn" data-page="books">Search</button>
+    </div>
+    <div class="hero-ctas">
+      <button class="btn-primary" data-page="books">Browse All Books</button>
+      <button class="btn-ghost-white" data-page="about">Learn More</button>
+    </div>
+  </section>
+
+  <section class="stats-section">
+    <div class="stats-inner">
+      <div class="stats-header">
+        <span class="section-label center">BY THE NUMBERS</span>
+        <h2 class="section-title center">PCSD E-Library Impact</h2>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-num">5,000+</div><div class="stat-label">Digital Publications</div></div>
+        <div class="stat-card green"><div class="stat-num">2M+</div><div class="stat-label">Downloads Last Year</div></div>
+        <div class="stat-card"><div class="stat-num">15+</div><div class="stat-label">Languages Supported</div></div>
+        <div class="stat-card green"><div class="stat-num">100%</div><div class="stat-label">Free &amp; Open Access</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-section">
+    <div class="featured-inner">
+      <div class="featured-header">
+        <span class="section-label center">COLLECTIONS</span>
+        <h2 class="section-title center">Featured Publications</h2>
+      </div>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="new">New Arrivals</button>
+        <button class="tab-btn" data-tab="trending">Most Accessed</button>
+        <button class="tab-btn" data-tab="issuances">PCSD Issuances</button>
+      </div>
+      <div class="tab-panel active" id="tab-new"></div>
+      <div class="tab-panel" id="tab-trending"></div>
+      <div class="tab-panel" id="tab-issuances"></div>
+      <div class="featured-footer">
+        <button class="btn-primary" data-page="books">View All Books</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="categories-section">
+    <div class="categories-inner">
+      <div class="categories-header">
+        <span class="section-label center">EXPLORE</span>
+        <h2 class="section-title center">Browse by Category</h2>
+      </div>
+      <div class="categories-grid">
+        <div class="category-tile" data-page="books"><div class="cat-icon blue">🌿</div><span>Environment</span></div>
+        <div class="category-tile" data-page="books"><div class="cat-icon green">📈</div><span>Sustainable Dev</span></div>
+        <div class="category-tile" data-page="books"><div class="cat-icon blue">🏛️</div><span>Governance</span></div>
+        <div class="category-tile" data-page="books"><div class="cat-icon green">⚖️</div><span>Laws</span></div>
+        <div class="category-tile" data-page="books"><div class="cat-icon blue">🔬</div><span>Research</span></div>
+        <div class="category-tile" data-page="books"><div class="cat-icon green">📚</div><span>Biodiversity</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="search-highlight">
+    <div class="search-highlight-inner">
+      <div>
+        <span class="section-label">FEATURES</span>
+        <h2 class="section-title">Advanced Search &amp; Discovery</h2>
+        <ul class="feature-list">
+          <li class="feature-item"><div class="feature-check">✓</div><p><strong>Full-Text Search</strong> — Find content across thousands of documents instantly</p></li>
+          <li class="feature-item"><div class="feature-check">✓</div><p><strong>Multi-Language Support</strong> — Browse in Filipino, English, and regional languages</p></li>
+          <li class="feature-item"><div class="feature-check">✓</div><p><strong>Smart Filters</strong> — Narrow by category, year, author, and file type</p></li>
+          <li class="feature-item"><div class="feature-check">✓</div><p><strong>Save &amp; Organize</strong> — Bookmark favorite publications and build personal collections</p></li>
+        </ul>
+        <button class="btn-primary" data-page="books">Start Searching</button>
+      </div>
+      <div class="search-mock">
+        <div class="mock-bar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+          <input type="text" placeholder="Search publications..." />
+        </div>
+        <div class="mock-result"><div class="mock-cover" style="background:#1A4F8A"></div><div class="mock-info"><strong>Palawan Biodiversity Action Plan</strong><span>2023 • Biodiversity • PDF</span></div></div>
+        <div class="mock-result"><div class="mock-cover" style="background:#2A7A35"></div><div class="mock-info"><strong>Strategic Environmental Plan (RA 7611)</strong><span>1992 • Environmental Laws • PDF</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="announcements-section">
+    <div class="announcements-inner">
+      <div style="margin-bottom:36px;">
+        <span class="section-label">UPDATES</span>
+        <h2 class="section-title">Latest News &amp; Announcements</h2>
+      </div>
+      <div class="announcements-grid">
+        <div class="ann-card blue"><span class="ann-type">UPDATE</span><h4>New Collections Added</h4><p>50+ new government publications now available in the Environmental Management category. Check back soon for featured releases.</p></div>
+        <div class="ann-card gold"><span class="ann-type">FEATURED</span><h4>2023 Annual Report Published</h4><p>The PCSD 2023 Annual Report on Sustainable Development in Palawan is now available for download in full-text and interactive formats.</p></div>
+        <div class="ann-card green"><span class="ann-type">NOTICE</span><h4>Mobile App Launch</h4><p>Our mobile app is now live on iOS and Android. Read offline, get push notifications, and sync bookmarks across devices.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-section">
+    <div class="how-inner">
+      <span class="section-label white center">GETTING STARTED</span>
+      <h2 class="section-title white center">How to Use the E-Library</h2>
+      <div class="steps-row">
+        <div class="step"><div class="step-num">1</div><h4>Search or Browse</h4><p>Use the search bar or category filters to find publications that interest you.</p></div>
+        <div class="step"><div class="step-num">2</div><h4>Read Online</h4><p>Open any publication in our web reader. No downloads required for quick browsing.</p></div>
+        <div class="step"><div class="step-num">3</div><h4>Save &amp; Share</h4><p>Bookmark publications, download PDFs, and share links with colleagues and friends.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="access-section">
+    <div class="access-inner">
+      <div style="margin-bottom:36px;text-align:center;">
+        <span class="section-label center">COMMITTED</span>
+        <h2 class="section-title center">Accessible to All</h2>
+      </div>
+      <div class="access-grid">
+        <div class="access-card"><div class="access-icon" style="background:rgba(26,79,138,0.10);color:#1A4F8A;">👁️</div><h4>Screen Reader Ready</h4><p>Full WCAG 2.1 AA compliance ensures our content is usable by assistive technologies.</p></div>
+        <div class="access-card"><div class="access-icon" style="background:rgba(42,122,53,0.10);color:#2A7A35;">📱</div><h4>Mobile Optimized</h4><p>Responsive design works seamlessly on phones, tablets, and desktops.</p></div>
+        <div class="access-card"><div class="access-icon" style="background:rgba(26,79,138,0.10);color:#1A4F8A;">🌐</div><h4>Multi-Language</h4><p>Browse content in Filipino, English, and 13+ regional languages.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials-section">
+    <div class="testimonials-inner">
+      <div style="margin-bottom:36px;text-align:center;">
+        <span class="section-label center">VOICES</span>
+        <h2 class="section-title center">What Users Say</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card"><p class="testimonial-text">"The PCSD E-Library made research so much easier. I found everything I needed for my thesis in one place."</p><div class="testimonial-author"><div class="author-avatar" style="background:#1A4F8A;">MA</div><div><span class="author-name">Maria Aquino</span><span class="author-role">Graduate Student</span></div></div></div>
+        <div class="testimonial-card"><p class="testimonial-text">"As a journalist, I rely on official documents. This library is my go-to for accurate, up-to-date government publications."</p><div class="testimonial-author"><div class="author-avatar" style="background:#2A7A35;">JD</div><div><span class="author-name">Juan dela Cruz</span><span class="author-role">Journalist</span></div></div></div>
+        <div class="testimonial-card"><p class="testimonial-text">"The offline download feature lets me read reports anywhere. Perfect for my fieldwork in remote areas."</p><div class="testimonial-author"><div class="author-avatar" style="background:#D4920A;">RP</div><div><span class="author-name">Rosa Pangilinan</span><span class="author-role">Field Coordinator</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-logo">
+          <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+            <path d="M20 2L35 15H5L20 2Z" fill="#fff"/>
+            <path d="M20 15L28 22H12L20 15Z" fill="rgba(255,255,255,0.7)"/>
+            <circle cx="20" cy="28" r="3" fill="rgba(255,255,255,0.5)"/>
+          </svg>
+          <div><span class="footer-brand-title">E-Library</span><span class="footer-brand-sub">PCSD</span></div>
+        </div>
+        <p>Free, trusted access to government knowledge and digital resources for sustainable development.</p>
+        <div class="footer-socials">
+          <button class="footer-social-btn" title="Facebook">f</button>
+          <button class="footer-social-btn" title="Twitter">𝕏</button>
+          <button class="footer-social-btn" title="LinkedIn">in</button>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Browse</h4><ul>
+        <li><a href="#" data-page="books">All Books</a></li>
+        <li><a href="#" data-page="books">Categories</a></li>
+        <li><a href="#" data-page="books">New Arrivals</a></li>
+        <li><a href="#" data-page="books">Most Read</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Learn</h4><ul>
+        <li><a href="#" data-page="about">About PCSD</a></li>
+        <li><a href="#" data-page="about">Mission &amp; Vision</a></li>
+        <li><a href="#" data-page="about">FAQ</a></li>
+        <li><a href="#" data-page="contact">Contact</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Legal</h4>
+        <p>© 2024 Palawan Council for Sustainable Development. All rights reserved.</p>
+        <p style="margin-top:14px;font-size:12px;"><a href="#" style="color:rgba(255,255,255,0.45)">Privacy Policy</a> • <a href="#" style="color:rgba(255,255,255,0.45)">Terms of Use</a> • <a href="#" style="color:rgba(255,255,255,0.45)">Accessibility</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Powered by PCSD. Made for public service.</p>
+      <div class="footer-bottom-links"><a href="#">Status</a><a href="#">Security</a><a href="#">Support</a></div>
+    </div>
+  </footer>
+</div>
+
+<!-- PAGE 2: ABOUT -->
+<div id="page-about" class="page" data-screen-label="About">
+  <div class="inner-header">
+    <div class="inner-header-inner">
+      <div class="breadcrumb"><a href="#" data-page="home">Home</a><span>/</span><span>About PCSD</span></div>
+      <h1>About the E-Library</h1>
+    </div>
+  </div>
+  <div class="about-body">
+    <div class="about-intro-grid">
+      <div class="about-text">
+        <h2>Palawan Council for Sustainable Development</h2>
+        <p>The Palawan Council for Sustainable Development (PCSD) is the governing body for coordinated and integrated planning and management of the province's natural resources. Established under Republic Act No. 7611, PCSD sets the strategic direction for balancing economic development with environmental protection.</p>
+        <p>Our E-Library is a digital repository of government publications, research reports, and strategic documents. It serves researchers, policymakers, students, and citizens who need access to reliable, authoritative information on sustainable development in Palawan.</p>
+      </div>
+      <div class="seal-card">
+        <div style="width:100px;height:100px;border-radius:50%;background:#1A4F8A;display:flex;align-items:center;justify-content:center;color:#fff;font-size:48px;margin-bottom:8px;">🛡️</div>
+        <h3>Official Repository</h3>
+        <p>All publications are verified and approved by PCSD governance bodies.</p>
+        <span class="seal-badge">Trusted Source</span>
+      </div>
+    </div>
+    <div class="mv-grid">
+      <div class="mv-card blue"><h3>Our Mission</h3><p>To provide free, equitable access to government knowledge and research on sustainable development, empowering individuals and organizations to make informed decisions that protect Palawan's natural resources.</p></div>
+      <div class="mv-card green"><h3>Our Vision</h3><p>A Palawan province where government information is transparent, accessible, and used by all stakeholders to drive sustainable environmental and social progress.</p></div>
+    </div>
+    <section class="about-elibrary">
+      <h2>The E-Library Platform</h2>
+      <p>Launched in 2021, our digital library has grown to house over 5,000 publications across 15 languages. We continuously expand our collection to serve researchers, students, policymakers, and the general public.</p>
+      <p style="margin-bottom:36px;">Our platform offers:</p>
+      <div class="services-grid">
+        <div class="service-card"><div class="service-icon" style="background:rgba(26,79,138,0.10);color:#1A4F8A;">🔍</div><h4>Full-Text Search</h4><p>Find content across all publications with advanced filtering and relevance ranking.</p></div>
+        <div class="service-card"><div class="service-icon" style="background:rgba(42,122,53,0.10);color:#2A7A35;">📖</div><h4>Web Reader</h4><p>Read inline without downloads. Adjust font size, brightness, and take notes.</p></div>
+        <div class="service-card"><div class="service-icon" style="background:rgba(26,79,138,0.10);color:#1A4F8A;">💾</div><h4>Download Options</h4><p>Save publications as PDF, EPUB, or plain text for offline reading.</p></div>
+        <div class="service-card"><div class="service-icon" style="background:rgba(42,122,53,0.10);color:#2A7A35;">📌</div><h4>Personal Collections</h4><p>Bookmark publications and organize them into custom reading lists.</p></div>
+        <div class="service-card"><div class="service-icon" style="background:rgba(26,79,138,0.10);color:#1A4F8A;">🌐</div><h4>Multi-Language Support</h4><p>Browse publications in Filipino, English, Tagalog, and regional languages.</p></div>
+        <div class="service-card"><div class="service-icon" style="background:rgba(42,122,53,0.10);color:#2A7A35;">♿</div><h4>Accessibility First</h4><p>WCAG 2.1 AA compliant. Full support for screen readers and assistive tech.</p></div>
+      </div>
+    </section>
+    <section class="partners-section">
+      <h2>Our Partner Institutions</h2>
+      <div class="partners-grid">
+        <div class="partner-tile"><div class="partner-logo" style="background:#1A4F8A;">DENR</div><span>Dept. of Environment &amp; Natural Resources</span></div>
+        <div class="partner-tile"><div class="partner-logo" style="background:#2A7A35;">DA</div><span>Dept. of Agriculture</span></div>
+        <div class="partner-tile"><div class="partner-logo" style="background:#D4920A;">DOT</div><span>Dept. of Tourism</span></div>
+        <div class="partner-tile"><div class="partner-logo" style="background:#1A4F8A;">UP</div><span>University of the Philippines</span></div>
+        <div class="partner-tile"><div class="partner-logo" style="background:#2A7A35;">PBRC</div><span>Palawan Biodiversity Research Centre</span></div>
+        <div class="partner-tile"><div class="partner-logo" style="background:#D4920A;">LGU</div><span>Palawan Local Government</span></div>
+        <div class="partner-tile"><div class="partner-logo" style="background:#1A4F8A;">NCIP</div><span>Natl. Commission on Indigenous Peoples</span></div>
+        <div class="partner-tile"><div class="partner-logo" style="background:#2A7A35;">UNESCO</div><span>Man and the Biosphere Programme</span></div>
+      </div>
+    </section>
+    <section style="margin-top:64px;width:100%;">
+      <div style="max-width:100%;padding:0 40px;">
+        <h2 style="margin-bottom:28px;">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item"><div class="faq-q"><span>Is the E-Library really free?</span><div class="faq-chevron">›</div></div><div class="faq-a">Yes, completely free! All publications are public resources funded by government. No registration, subscription, or payment required.</div></div>
+          <div class="faq-item"><div class="faq-q"><span>Can I download publications for offline use?</span><div class="faq-chevron">›</div></div><div class="faq-a">Absolutely. You can download most publications as PDF, EPUB, or plain text. Check each publication page for available formats.</div></div>
+          <div class="faq-item"><div class="faq-q"><span>Are these publications in languages other than English?</span><div class="faq-chevron">›</div></div><div class="faq-a">Yes! We have publications in Filipino, Tagalog, Cebuano, Palawano, and 10+ other regional languages. Use the language filter to find them.</div></div>
+          <div class="faq-item"><div class="faq-q"><span>How often is the collection updated?</span><div class="faq-chevron">›</div></div><div class="faq-a">We add new publications every week. Subscribe to our newsletter to get notified about new releases in your areas of interest.</div></div>
+          <div class="faq-item"><div class="faq-q"><span>Can I cite these publications in academic work?</span><div class="faq-chevron">›</div></div><div class="faq-a">Yes! Each publication includes a suggested citation format on its detail page. All content is public domain or Creative Commons licensed.</div></div>
+          <div class="faq-item"><div class="faq-q"><span>Do you have a mobile app?</span><div class="faq-chevron">›</div></div><div class="faq-a">Our web app is fully responsive and works great on phones. A native iOS/Android app is now available.</div></div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-grid"><div class="footer-brand"><p>Free, trusted access to government knowledge.</p></div></div>
+  </footer>
+</div>
+
+<!-- PAGE 3: BOOKS/BROWSE -->
+<div id="page-books" class="page" data-screen-label="Browse Books">
+  <div class="inner-header">
+    <div class="inner-header-inner">
+      <div class="breadcrumb"><a href="#" data-page="home">Home</a><span>/</span><span>Browse Books</span></div>
+      <h1>Browse All Publications</h1>
+    </div>
+  </div>
+  <div class="books-controls">
+    <div class="books-controls-inner">
+      <div class="books-search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+        <input type="text" id="books-search" placeholder="Search by title, author, topic..." />
+      </div>
+      <select class="sort-select" id="sort-select">
+        <option value="relevance">Relevance</option>
+        <option value="newest">Newest</option>
+        <option value="oldest">Oldest</option>
+        <option value="title">Title (A-Z)</option>
+      </select>
+    </div>
+  </div>
+  <div class="books-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h4>Category</h4>
+        <div class="filter-pills">
+          <button class="filter-pill active" data-value="all">All</button>
+          <button class="filter-pill" data-value="environment">Environment</button>
+          <button class="filter-pill" data-value="biodiversity">Biodiversity</button>
+          <button class="filter-pill" data-value="research">Research</button>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <h4>Language</h4>
+        <div class="filter-checks">
+          <label class="filter-check"><input type="checkbox" value="english" checked /><span>English</span></label>
+          <label class="filter-check"><input type="checkbox" value="filipino" /><span>Filipino</span></label>
+          <label class="filter-check"><input type="checkbox" value="mixed" /><span>Mixed</span></label>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <h4>Publication Year</h4>
+        <div class="year-range">
+          <input type="number" class="year-input" placeholder="From" min="1990" max="2024" />
+          <span>–</span>
+          <input type="number" class="year-input" placeholder="To" min="1990" max="2024" />
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <h4>File Type</h4>
+        <div class="filter-checks">
+          <label class="filter-check"><input type="checkbox" value="pdf" checked /><span>PDF</span></label>
+          <label class="filter-check"><input type="checkbox" value="report" /><span>Report</span></label>
+        </div>
+      </div>
+      <button class="reset-link" id="reset-filters-btn">Reset Filters</button>
+    </aside>
+    <main>
+      <div class="results-bar">
+        <p>Showing <strong id="result-count">13</strong> publications</p>
+        <div class="view-toggle">
+          <button class="active" title="Grid view"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></button>
+          <button title="List view"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="3"/><rect x="3" y="9" width="18" height="3"/><rect x="3" y="15" width="18" height="3"/></svg></button>
+        </div>
+      </div>
+      <div class="books-grid-3" id="books-grid"></div>
+      <div class="pagination">
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">→</button>
+      </div>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-grid"><div class="footer-brand"><p>Discover knowledge. Support sustainable development.</p></div></div>
+  </footer>
+</div>
+
+<!-- PAGE 4: CONTACT -->
+<div id="page-contact" class="page" data-screen-label="Contact">
+  <div class="inner-header">
+    <div class="inner-header-inner">
+      <div class="breadcrumb"><a href="#" data-page="home">Home</a><span>/</span><span>Contact</span></div>
+      <h1>Get in Touch</h1>
+    </div>
+  </div>
+  <div class="contact-body">
+    <div class="contact-grid">
+      <div class="contact-form-wrap">
+        <h2>Send us a Message</h2>
+        <p>Have a question or suggestion? We'd love to hear from you.</p>
+        <form class="form-stack" id="contact-form">
+          <div class="form-group"><label>Full Name</label><input type="text" class="form-control" placeholder="Your name" required /></div>
+          <div class="form-group"><label>Email Address</label><input type="email" class="form-control" placeholder="your@email.com" required /></div>
+          <div class="form-group"><label>Subject</label><select class="form-control" required><option value="">Select a topic...</option><option>Feedback</option><option>Report a Bug</option><option>Missing Publication</option><option>Partnership</option><option>Other</option></select></div>
+          <div class="form-group"><label>Message</label><textarea class="form-control" placeholder="Tell us what's on your mind..." required></textarea></div>
+          <button type="submit" class="btn-primary btn-full">Send Message</button>
+        </form>
+      </div>
+      <div class="contact-info-card">
+        <h3>Contact Information</h3>
+        <div class="contact-detail"><div class="detail-icon">📍</div><div><span class="detail-label">Headquarters</span><span class="detail-value">PCSD Building, Sports Complex Road, Sta. Monica, Puerto Princesa City, Palawan 5300</span></div></div>
+        <div class="contact-detail"><div class="detail-icon">📞</div><div><span class="detail-label">Phone</span><span class="detail-value">(048) 434-4234</span></div></div>
+        <div class="contact-detail"><div class="detail-icon">✉️</div><div><span class="detail-label">Email</span><span class="detail-value">elibrary@pcsd.gov.ph</span></div></div>
+        <div class="contact-detail"><div class="detail-icon">🕒</div><div><span class="detail-label">Hours</span><span class="detail-value">Mon–Fri, 8 AM – 5 PM PST</span></div></div>
+        <div class="contact-divider"></div>
+        <span class="follow-label">Follow Us</span>
+        <div class="footer-socials"><button class="footer-social-btn">f</button><button class="footer-social-btn">𝕏</button><button class="footer-social-btn">in</button></div>
+      </div>
+    </div>
+    <div class="map-placeholder"><span>📍 Map (embed location)</span><small>Puerto Princesa City, Palawan, Philippines</small></div>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-grid"><div class="footer-brand"><p>We're here to help. Reach out anytime.</p></div></div>
+  </footer>
+</div>
+
+<!-- PAGE 5: READER -->
+<div id="page-reader" class="page" data-screen-label="Reader">
+  <div class="reading-progress" id="reading-progress"></div>
+  <div class="reader-hero">
+    <div class="reader-hero-inner">
+      <div class="reader-cover" id="reader-cover-img"></div>
+      <div class="reader-hero-meta">
+        <div class="reader-badges"><span class="reader-badge gold" id="reader-badge"></span></div>
+        <h1 id="reader-title"></h1>
+        <p class="reader-byline">Published by <strong id="reader-author"></strong> • <span id="reader-year"></span></p>
+        <div class="reader-actions">
+          <button class="reader-action-btn download" id="download-btn">⬇ Download</button>
+          <button class="reader-action-btn bookmark" id="bookmark-btn">☆ Bookmark</button>
+          <button class="reader-action-btn share" id="share-btn">↗ Share</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="reader-layout">
+    <aside class="reader-toc"><ul id="toc-list"></ul></aside>
+    <article class="reader-article" id="reader-article"></article>
+  </div>
+  <div class="reader-footer-nav" id="reader-nav"></div>
+  <footer class="site-footer">
+    <div class="footer-grid"><div class="footer-brand"><p>Government knowledge at your fingertips.</p></div></div>
+  </footer>
+</div>
+
+<!-- PAGE 6: DASHBOARD -->
+<div id="page-dashboard" class="page" data-screen-label="Dashboard">
+  <div class="inner-header">
+    <div class="inner-header-inner">
+      <div class="breadcrumb"><a href="#" data-page="home">Home</a><span>/</span><span>My Library</span></div>
+      <h1>My Library</h1>
+    </div>
+  </div>
+  <div class="dash-body">
+    <div class="dash-header-card">
+      <div class="dash-avatar" id="user-initial">G</div>
+      <div class="dash-user-info"><h2 id="user-name">Guest Researcher</h2><p>Your saved publications, reading history, and downloads.</p></div>
+      <button class="btn-ghost" id="signout-btn">Sign Out</button>
+    </div>
+    <div class="dash-stats">
+      <div class="dash-stat"><div class="dash-stat-icon gold">★</div><div><div class="num" id="stat-bookmarked">0</div><div class="lbl">Bookmarked</div></div></div>
+      <div class="dash-stat"><div class="dash-stat-icon blue">👁</div><div><div class="num" id="stat-recent">0</div><div class="lbl">Recently Viewed</div></div></div>
+      <div class="dash-stat"><div class="dash-stat-icon green">⬇</div><div><div class="num" id="stat-downloads">0</div><div class="lbl">Downloads</div></div></div>
+    </div>
+    <div class="dash-tabs">
+      <button class="dash-tab active" data-dash-tab="bookmarked">★ Bookmarked <span class="count-badge" id="count-bookmarked">0</span></button>
+      <button class="dash-tab" data-dash-tab="recent">👁 Recently Viewed <span class="count-badge" id="count-recent">0</span></button>
+      <button class="dash-tab" data-dash-tab="downloads">⬇ Downloads <span class="count-badge" id="count-downloads">0</span></button>
+    </div>
+    <div class="dash-panel active" data-dash-panel="bookmarked"><div id="bookmarked-panel"></div></div>
+    <div class="dash-panel" data-dash-panel="recent"><div id="recent-panel"></div></div>
+    <div class="dash-panel" data-dash-panel="downloads"><div id="downloads-panel"></div></div>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-grid"><div class="footer-brand"><p>Your reading journey, organized.</p></div></div>
+  </footer>
+</div>
+
+<!-- PAGE 7: LOGIN / ACCOUNT -->
+<div id="page-account" class="page" data-screen-label="Login Page">
+  <div class="account-page">
+    <div class="login-card">
+      <div class="login-logo-wrap">
+        <svg width="64" height="64" viewBox="0 0 40 40" fill="none">
+          <path d="M20 2L35 15H5L20 2Z" fill="#1A4F8A"/>
+          <path d="M20 15L28 22H12L20 15Z" fill="#2A7A35"/>
+          <circle cx="20" cy="28" r="3" fill="#7B3F1A"/>
+          <circle cx="20" cy="28" r="1.5" fill="#D4920A"/>
+        </svg>
+      </div>
+      <h2>Welcome Back</h2>
+      <span class="login-sub">Sign in to access the PCSD E-Library</span>
+      <div class="login-form">
+        <div class="form-group">
+          <label>Email Address</label>
+          <input class="form-control" id="login-email" type="email" placeholder="your@email.com" />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <div class="input-wrapper">
+            <input class="form-control" id="login-password" type="password" placeholder="Enter your password" />
+            <button class="eye-btn" type="button" id="toggle-pw-btn" aria-label="Toggle password visibility">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="login-options">
+          <label class="remember-me">
+            <input type="checkbox" />
+            <span>Remember me</span>
+          </label>
+          <a class="forgot-link" href="#">Forgot Password?</a>
+        </div>
+        <button class="btn-primary btn-full" id="sign-in-btn">Sign In</button>
+        <div class="or-divider">
+          <div class="or-line"></div>
+          <span>OR</span>
+          <div class="or-line"></div>
+        </div>
+        <button class="btn-ghost btn-full" id="create-account-btn">Create a Free Account</button>
+      </div>
+    </div>
+    <div class="benefit-pills">
+      <div class="benefit-pill">📄 PCSD Publications</div>
+      <div class="benefit-pill">📥 Free Downloads</div>
+      <div class="benefit-pill">🔖 Save Research</div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div id="toast-stack"></div>
+
+<!-- ============ DATA ============ -->
+<script>
+(function () {
+  var P = function (t) { return '<p>' + t + '</p>'; };
+  window.PCSD_BOOKS = {
+    "ra-7611": { title: "Strategic Environmental Plan for Palawan Act (RA 7611)", publisher: "PCSD", year: "1992", category: "Environmental Laws", tag: "blue", language: "English", fileType: "PDF", pages: 48, cover: "https://placehold.co/200x280/0D2F5E/D6E4F0?text=RA+7611", abstract: "Republic Act No. 7611, the Strategic Environmental Plan (SEP) for Palawan Act, is the cornerstone legislation governing the sustainable development of the Province of Palawan. Enacted in 1992, it adopts a comprehensive framework for the conservation of Palawan's natural resources and creates the Palawan Council for Sustainable Development (PCSD) as the lead implementing body.", sections: [
+      { id: "preamble", heading: "Declaration of Policy", html: P("It is hereby declared the policy of the State to protect, develop and conserve the natural resources of the Province of Palawan. Towards this end, the State shall assist and support the implementation of plans, programs and projects formulated to preserve and enhance the environment, and at the same time pursue the socio-economic development goals of the province.") + P("This Act adopts a comprehensive framework for the sustainable development of Palawan compatible with protecting and enhancing the natural resources and endangered environment of the province.") + "<div class='doc-callout'>" + P("<strong>Sustainable development</strong>, as used in this Act, means the improvement in the quality of life of the present generation without compromising the ability of future generations to meet their own needs.") + "</div>" },
+      { id: "ecan", heading: "The Environmentally Critical Areas Network (ECAN)", html: P("The main strategy of the SEP is the establishment of a graded system of protection and development control over the whole of Palawan, called the Environmentally Critical Areas Network (ECAN). ECAN is a management scheme that serves as the principal mechanism for the implementation of the Strategic Environmental Plan.") + P("ECAN shall serve to provide for the regulation and management of the various areas of Palawan according to their ecological importance, ensuring the protection of tribal peoples and the preservation of biological diversity.") + "<h3>The Three Zone Components</h3><ul class='doc-list'><li><strong>Terrestrial component</strong> — covers the mountainous, hilly and lowland areas. It is composed of core zones (areas of maximum protection), buffer zones (graded into restricted, controlled and traditional use zones) and multiple/manipulative use zones.</li><li><strong>Coastal/marine component</strong> — covers the seascape, including mangroves, coral reefs, seagrass beds, and the seabed, managed to protect fisheries and marine biodiversity.</li><li><strong>Tribal ancestral lands</strong> — areas traditionally occupied by cultural communities, recognized to secure their way of life and ensure their participation in resource management.</li></ul>" },
+      { id: "council", heading: "Creation of the PCSD", html: P("To govern, implement and provide policy direction for the Strategic Environmental Plan, a Palawan Council for Sustainable Development (PCSD) is hereby created. The Council shall be composed of representatives from national government agencies, the provincial and local governments, non-governmental organizations and the academe, ensuring multi-sectoral participation.") + P("The Council exercises supervision over the implementation of the SEP and is supported by a Staff (PCSDS) that carries out its technical, administrative and regulatory functions, including the issuance of SEP Clearances for activities affecting the environment of Palawan.") },
+      { id: "powers", heading: "Powers and Functions of the Council", html: "<ul class='doc-list'><li>Formulate plans and policies as may be necessary to carry out the provisions of this Act.</li><li>Coordinate with local governments to ensure that their plans, programs and projects are aligned with the SEP.</li><li>Call on any government agency to undertake assistance in the implementation of the plan.</li><li>Approve, review and evaluate, and grant clearances for proposed activities within the ECAN.</li><li>Impose penalties and sanctions for violations of the guidelines, rules and regulations.</li></ul>" + P("The Council, through its Staff, monitors compliance and may recommend the suspension or cancellation of permits and clearances of projects found to be in violation of the SEP.") },
+      { id: "refs", heading: "References & Citation", html: P("This is the official digitized text edition of Republic Act No. 7611 as maintained by the PCSD E-Library. For the certified copy and subsequent amendments, consult the Official Gazette and the PCSD website.") + "<ul class='doc-list doc-refs'><li>Republic of the Philippines. (1992). <em>Republic Act No. 7611 — Strategic Environmental Plan (SEP) for Palawan Act.</em> Congress of the Philippines.</li><li>Palawan Council for Sustainable Development. <em>Strategic Environmental Plan.</em> Retrieved from pcsd.gov.ph</li></ul>" }
+    ]},
+    "biodiversity-2023": { title: "Palawan Biodiversity Conservation Action Plan 2023", publisher: "PBRC", year: "2023", category: "Biodiversity", tag: "green", language: "English", fileType: "PDF", pages: 132, cover: "https://placehold.co/200x280/1C6B3A/D6F0DC?text=Biodiversity+Plan+2023", abstract: "A strategic blueprint for safeguarding the exceptional biological diversity of Palawan, recognized globally as the Philippines' Last Ecological Frontier. The Plan sets conservation priorities, targets and actions across terrestrial, freshwater and marine ecosystems for the period 2023–2028.", sections: [
+      { id: "context", heading: "Palawan: The Last Ecological Frontier", html: P("Palawan harbours one of the richest concentrations of biodiversity in the Philippines. The province is home to numerous endemic species — plants and animals found nowhere else on Earth — and was declared a Man and Biosphere Reserve by UNESCO in 1990. Its forests, mangroves, seagrass meadows and coral reefs form an interconnected web of life that sustains both wildlife and human communities.") + P("This Action Plan responds to mounting pressures from land-use conversion, unsustainable resource extraction, invasive species and climate change. It translates the conservation mandate of the Strategic Environmental Plan (RA 7611) into measurable five-year targets.") },
+      { id: "species", heading: "Priority Species and Habitats", html: P("The Plan identifies flagship and keystone species whose protection delivers broad ecosystem benefits, alongside the critical habitats they depend upon.") + "<table class='doc-table'><thead><tr><th>Species / Habitat</th><th>Status</th><th>Conservation Priority</th></tr></thead><tbody><tr><td>Philippine cockatoo (<em>Cacatua haematuropygia</em>)</td><td>Critically Endangered</td><td>Nest protection &amp; anti-poaching</td></tr><tr><td>Palawan pangolin (<em>Manis culionensis</em>)</td><td>Critically Endangered</td><td>Trade interdiction</td></tr><tr><td>Palawan forest turtle (<em>Siebenrockiella leytensis</em>)</td><td>Critically Endangered</td><td>Habitat &amp; confiscation rescue</td></tr><tr><td>Dugong (<em>Dugong dugon</em>)</td><td>Vulnerable</td><td>Seagrass protection</td></tr></tbody></table>" },
+      { id: "strategies", heading: "Strategic Directions", html: "<ol class='doc-list'><li><strong>Strengthen protected-area management</strong> across the ECAN core and buffer zones, with improved patrolling and community guardianship.</li><li><strong>Combat illegal wildlife trade</strong> through inter-agency enforcement, port monitoring and demand-reduction campaigns.</li><li><strong>Restore degraded ecosystems</strong> — reforestation with native species, mangrove rehabilitation, and coral-reef recovery.</li><li><strong>Mainstream biodiversity</strong> into local development plans and the SEP clearance process.</li><li><strong>Empower indigenous and local communities</strong> as frontline stewards through co-management agreements.</li></ol>" },
+      { id: "monitoring", heading: "Monitoring & Evaluation", html: P("Progress will be tracked against a results framework with annual indicators reported through the Palawan Knowledge Platform (PKP). Biodiversity surveys, remote-sensing of forest cover, and community-based monitoring feed into an adaptive management cycle that allows targets to be refined as new data emerge.") },
+      { id: "refs", heading: "References & Citation", html: "<ul class='doc-list doc-refs'><li>Palawan Biodiversity Research Centre. (2023). <em>Palawan Biodiversity Conservation Action Plan 2023–2028.</em></li><li>UNESCO. (1990). <em>Palawan Biosphere Reserve — Man and the Biosphere Programme.</em></li></ul>" }
+    ]},
+    "annual-2023": { title: "PCSD Annual Report 2023", publisher: "PCSD", year: "2023", category: "PCSD Issuances", tag: "gold", language: "English", fileType: "PDF", pages: 86, cover: "https://placehold.co/200x280/B87B08/FFF3CC?text=PCSD+Annual+Report+2023", abstract: "The official annual accounting of the Palawan Council for Sustainable Development for calendar year 2023 — summarizing accomplishments in SEP implementation, ECAN management, regulatory clearances, enforcement, and partnerships across the province.", sections: [
+      { id: "message", heading: "Message from the Chairperson", html: "<blockquote>The year 2023 reaffirmed our shared conviction that the future of Palawan rests on the balance between development and conservation. Through the collective effort of our partners and communities, we advanced the Strategic Environmental Plan while keeping faith with the province's identity as the country's Last Ecological Frontier.</blockquote>" + P("This report documents the Council's work over the past year and renders an account of how public trust and resources were used in service of sustainable development.") },
+      { id: "highlights", heading: "Key Accomplishments", html: "<table class='doc-table'><thead><tr><th>Indicator</th><th>2023 Result</th></tr></thead><tbody><tr><td>SEP Clearances processed</td><td>2,140</td></tr><tr><td>ECAN zoning maps adopted by LGUs</td><td>23 municipalities</td></tr><tr><td>Hectares of forest under active protection</td><td>1.2 million</td></tr><tr><td>Wildlife enforcement operations</td><td>318</td></tr><tr><td>Publications digitized for the E-Library</td><td>480</td></tr></tbody></table>" + P("The Council intensified field monitoring and strengthened coordination with municipal and barangay governments to ensure that the ECAN strategy translates into on-the-ground protection.") },
+      { id: "enforcement", heading: "Regulation & Enforcement", html: P("In partnership with the DENR, the Philippine National Police, and the Bantay Palawan network, the PCSD conducted enforcement operations against illegal logging, wildlife trafficking and unauthorized land conversion. Confiscated wildlife was turned over to accredited rescue centres, and cases were filed against violators under RA 7611, RA 9147 and related laws.") },
+      { id: "outlook", heading: "Financial Overview & Outlook", html: P("The Council operated within its appropriated budget, directing the majority of resources toward field operations, ECAN monitoring, and community programs. For the coming year, priorities include the full digitization of the issuances archive, expansion of the Palawan Knowledge Platform, and the rollout of climate-resilience measures across coastal municipalities.") },
+      { id: "refs", heading: "References & Citation", html: "<ul class='doc-list doc-refs'><li>Palawan Council for Sustainable Development. (2023). <em>PCSD Annual Report 2023.</em> Puerto Princesa City: PCSD.</li></ul>" }
+    ]},
+    "ra-9147": { title: "Wildlife Resources Conservation and Protection Act (RA 9147)", publisher: "DENR", year: "2001", category: "Environmental Laws", tag: "green", language: "English", fileType: "PDF", pages: 36, cover: "https://placehold.co/200x280/2A7A35/D6F0DC?text=Wildlife+Act+RA+9147", abstract: "Republic Act No. 9147 provides for the conservation and protection of wildlife resources and their habitats in the Philippines. It defines prohibited acts, establishes a permit system, and prescribes penalties — and is a primary instrument applied in Palawan alongside the SEP.", sections: [
+      { id: "policy", heading: "Declaration of Policy", html: P("It shall be the policy of the State to conserve the country's wildlife resources and their habitats for sustainability. In the pursuit of this policy, the State shall: conserve and protect wildlife species and their habitats to promote ecological balance and enhance biological diversity; regulate the collection and trade of wildlife; pursue the Philippine commitment to international conventions; and initiate or support scientific studies on the conservation of biological diversity.") },
+      { id: "scope", heading: "Scope & Jurisdiction", html: P("The Act covers all wildlife species found in all areas of the country, including protected areas under Republic Act No. 7586 (NIPAS Act) and critical habitats. For terrestrial species, jurisdiction generally rests with the Department of Environment and Natural Resources (DENR); for aquatic species, with the Department of Agriculture. In Palawan, implementation is coordinated with the PCSD pursuant to RA 7611.") },
+      { id: "prohibited", heading: "Illegal Acts", html: P("Unless otherwise allowed under this Act, the following acts are considered illegal:") + "<ul class='doc-list'><li>Killing and destroying wildlife species, except in specified lawful circumstances.</li><li>Inflicting injury that cripples and/or impairs the reproductive system of wildlife.</li><li>Effecting any of the foregoing acts in critical habitats.</li><li>Introducing, trading, collecting, hunting or possessing wildlife and their by-products without the required permit.</li><li>Transporting wildlife without proper documentation.</li></ul>" },
+      { id: "penalties", heading: "Penalties", html: P("Penalties are graduated according to the conservation status of the species concerned and the gravity of the offense, ranging from fines to imprisonment. Heavier penalties apply when the species involved is critically endangered, endangered or vulnerable.") + "<div class='doc-callout'>" + P("<strong>Note for Palawan:</strong> Species such as the Philippine cockatoo, Palawan pangolin and Palawan forest turtle are protected under this Act, and offenses involving them carry the most severe sanctions.") + "</div>" },
+      { id: "refs", heading: "References & Citation", html: "<ul class='doc-list doc-refs'><li>Republic of the Philippines. (2001). <em>Republic Act No. 9147 — Wildlife Resources Conservation and Protection Act.</em></li></ul>" }
+    ]},
+    "sdg-roadmap": { title: "Sustainable Development Goals: Palawan Roadmap", publisher: "PCSD", year: "2022", category: "Sustainable Development", tag: "blue", language: "English", fileType: "PDF", pages: 98, cover: "https://placehold.co/200x280/1A4F8A/D6E4F0?text=SDG+Palawan+Roadmap", abstract: "A localization of the United Nations 2030 Agenda for Sustainable Development to the context of Palawan. The Roadmap aligns provincial programs with the 17 Sustainable Development Goals, anchored on the Strategic Environmental Plan's vision of balanced ecological and human well-being.", sections: [
+      { id: "vision", heading: "Aligning Palawan with the 2030 Agenda", html: P("The Sustainable Development Goals (SDGs) provide a universal framework for ending poverty, protecting the planet and ensuring prosperity for all. For Palawan, the SDGs resonate deeply with the long-standing mandate of the Strategic Environmental Plan: that development must never come at the irreversible cost of the environment.") + P("This Roadmap maps existing provincial programs to the SDG targets, identifies gaps, and proposes priority actions to 2030.") },
+      { id: "priority", heading: "Priority Goals for Palawan", html: "<ul class='doc-list'><li><strong>SDG 14 — Life Below Water:</strong> protect coral reefs, seagrass and fisheries that sustain coastal livelihoods.</li><li><strong>SDG 15 — Life on Land:</strong> halt deforestation, protect endemic species, and restore degraded forests.</li><li><strong>SDG 13 — Climate Action:</strong> build resilience to typhoons, sea-level rise and changing rainfall.</li><li><strong>SDG 1 &amp; 8 — No Poverty &amp; Decent Work:</strong> promote sustainable ecotourism and green livelihoods.</li><li><strong>SDG 6 — Clean Water:</strong> safeguard watersheds that supply communities across the province.</li></ul>" },
+      { id: "integration", heading: "Integrating ECAN and the SDGs", html: P("The Environmentally Critical Areas Network already operationalizes much of the SDG agenda at the landscape scale. By layering SDG indicators onto ECAN zoning, the province can measure not only ecological integrity but also progress on health, education, water and decent work in the communities living within and around critical areas.") },
+      { id: "refs", heading: "References & Citation", html: "<ul class='doc-list doc-refs'><li>Palawan Council for Sustainable Development. (2022). <em>Sustainable Development Goals: Palawan Roadmap.</em></li><li>United Nations. (2015). <em>Transforming Our World: the 2030 Agenda for Sustainable Development.</em></li></ul>" }
+    ]},
+    "mangrove": { title: "Palawan Mangrove Ecosystem Study", publisher: "PBRC", year: "2021", category: "Research & Studies", tag: "green", language: "English", fileType: "Report", pages: 110, cover: "https://placehold.co/200x280/0D2240/D6E4F0?text=Mangrove+Ecosystem+Study", abstract: "A field-based assessment of the extent, condition and ecological services of Palawan's mangrove forests — among the most extensive and intact in the Philippines — with recommendations for protection, rehabilitation and blue-carbon valuation.", sections: [
+      { id: "intro", heading: "Why Mangroves Matter", html: P("Mangrove forests occupy the dynamic boundary between land and sea. In Palawan they form dense green belts along estuaries and sheltered coasts, providing nursery habitat for fish and crustaceans, coastal protection against storm surge, and one of the most efficient carbon stores on the planet — so-called 'blue carbon'.") + P("This study documents the status of these ecosystems and the pressures they face, from aquaculture conversion to cutting for fuelwood and construction.") },
+      { id: "methods", heading: "Study Area & Methods", html: P("Surveys were conducted across representative mangrove stands in northern, central and southern Palawan. Transect plots recorded species composition, tree density, diameter and canopy condition. Satellite imagery was used to estimate total mangrove cover and change over the preceding two decades, while sediment cores informed carbon-stock estimates.") },
+      { id: "findings", heading: "Key Findings", html: "<ul class='doc-list'><li>Palawan retains some of the most extensive and structurally intact mangrove forests in the country.</li><li>Dominant species include <em>Rhizophora</em>, <em>Avicennia</em>, <em>Sonneratia</em> and <em>Bruguiera</em>.</li><li>Mangrove loss is concentrated near settlements and aquaculture zones; remote stands remain largely undisturbed.</li><li>Carbon stocks per hectare rank among the highest recorded in Southeast Asia.</li></ul>" },
+      { id: "recommend", heading: "Recommendations", html: "<ol class='doc-list'><li>Designate high-value mangrove stands as ECAN core zones with strict protection.</li><li>Rehabilitate abandoned fishponds using site-appropriate native species.</li><li>Develop community-managed blue-carbon projects that channel benefits to coastal villages.</li><li>Integrate mangrove protection into municipal coastal resource management plans.</li></ol>" },
+      { id: "refs", heading: "References & Citation", html: "<ul class='doc-list doc-refs'><li>Palawan Biodiversity Research Centre. (2021). <em>Palawan Mangrove Ecosystem Study.</em></li></ul>" }
+    ]},
+    "ipra": { title: "Indigenous Peoples Rights in Palawan", publisher: "NCIP", year: "2019", category: "Local Governance", tag: "gold", language: "English", fileType: "PDF", pages: 72, cover: "https://placehold.co/200x280/7B3F1A/F5E6DA?text=Indigenous+Peoples+Rights", abstract: "An accessible guide to the rights of Palawan's Indigenous Peoples under the Indigenous Peoples' Rights Act (RA 8371, IPRA), covering ancestral domains, self-governance, cultural integrity and the principle of Free and Prior Informed Consent — as they intersect with the Strategic Environmental Plan.", sections: [
+      { id: "peoples", heading: "The Indigenous Peoples of Palawan", html: P("Palawan is home to several Indigenous groups, among them the Tagbanua, the Pala'wan, the Batak and the Molbog. For generations these communities have lived in close relationship with the island's forests, rivers and seas, maintaining knowledge systems and customary practices that are themselves a form of conservation.") + P("The Indigenous Peoples' Rights Act of 1997 (RA 8371) recognizes and protects the rights of Indigenous Cultural Communities and Indigenous Peoples (ICCs/IPs) to their ancestral domains, self-governance, social justice and cultural integrity.") },
+      { id: "domains", heading: "Ancestral Domains & Native Title", html: P("The IPRA affirms the concept of native title — the recognition that ancestral domains have been held by ICCs/IPs since time immemorial. The National Commission on Indigenous Peoples (NCIP) issues Certificates of Ancestral Domain Title (CADT) and Certificates of Ancestral Land Title (CALT) that formally recognize these rights.") + P("Within Palawan, several ancestral domains overlap with ECAN zones, requiring that the Strategic Environmental Plan be implemented in a manner that respects and strengthens Indigenous stewardship.") },
+      { id: "fpic", heading: "Free and Prior Informed Consent (FPIC)", html: "<div class='doc-callout'>" + P("<strong>Free and Prior Informed Consent</strong> is the consensus of all members of the ICCs/IPs, determined in accordance with their respective customary laws and practices, free from external manipulation, interference and coercion, and obtained after fully disclosing the intent and scope of an activity.") + "</div>" + P("No project affecting an ancestral domain — whether for resource use, infrastructure or research — may proceed without FPIC. This safeguard ensures that development decisions on Indigenous lands are made with, and not merely for, the communities concerned.") },
+      { id: "refs", heading: "References & Citation", html: "<ul class='doc-list doc-refs'><li>Republic of the Philippines. (1997). <em>Republic Act No. 8371 — The Indigenous Peoples' Rights Act.</em></li></ul>" }
+    ]},
+    "coral-bacuit": { title: "Coral Reef Status Report — Bacuit Bay 2022", publisher: "PCSD", year: "2022", category: "Research & Studies", tag: "green", language: "English", fileType: "Report", pages: 64, cover: "https://placehold.co/200x280/1C6B3A/D6F0DC?text=Coral+Reef+Bacuit+Bay", abstract: "A monitoring report on the condition of coral reefs in Bacuit Bay, El Nido — a globally celebrated seascape under growing pressure from tourism. The report presents reef health indicators, threats, and management recommendations for one of Palawan's premier marine areas.", sections: [
+      { id: "intro", heading: "Bacuit Bay: A Seascape of Global Renown", html: P("Framed by dramatic karst cliffs and dotted with islands, Bacuit Bay in El Nido is among the most visited marine destinations in the Philippines. Beneath its turquoise waters lie coral reefs that support abundant fish life and underpin the local tourism economy. That same popularity, however, places the reefs under intense pressure.") },
+      { id: "method", heading: "Survey Methods", html: P("Reef health was assessed using standard line-intercept transect and fish-visual-census techniques at fixed monitoring stations across the bay. Indicators recorded included live hard-coral cover, coral genera diversity, reef-fish biomass, and the presence of indicators of stress such as bleaching, sedimentation and crown-of-thorns starfish.") },
+      { id: "results", heading: "Findings", html: "<table class='doc-table'><thead><tr><th>Indicator</th><th>Observation</th></tr></thead><tbody><tr><td>Live hard-coral cover</td><td>Fair to good at protected stations; degraded near high-traffic anchorages</td></tr><tr><td>Coral diversity</td><td>High genera richness in sheltered channels</td></tr><tr><td>Reef-fish biomass</td><td>Higher inside no-take zones</td></tr><tr><td>Principal threats</td><td>Anchor damage, sedimentation, localized bleaching</td></tr></tbody></table>" + P("Reefs within enforced no-take zones consistently outperformed those in open-access areas, demonstrating the tangible benefits of protection.") },
+      { id: "recommend", heading: "Management Recommendations", html: "<ol class='doc-list'><li>Install and maintain mooring buoys to eliminate anchor damage at dive and snorkel sites.</li><li>Expand and strictly enforce no-take marine protected areas.</li><li>Regulate visitor numbers and carrying capacity at the most popular sites.</li><li>Strengthen watershed management to reduce land-based sedimentation.</li></ol>" },
+      { id: "refs", heading: "References & Citation", html: "<ul class='doc-list doc-refs'><li>Palawan Council for Sustainable Development. (2022). <em>Coral Reef Status Report — Bacuit Bay 2022.</em></li></ul>" }
+    ]},
+    "el-nido": { title: "El Nido Marine Reserve: 10-Year Assessment", publisher: "PCSD", year: "2023", category: "Research & Studies", tag: "blue", language: "English", fileType: "Report", pages: 120, cover: "https://placehold.co/200x280/0D2F5E/D6E4F0?text=El+Nido+Marine+Reserve", abstract: "A decade-long review of management outcomes in the El Nido–Taytay Managed Resource Protected Area, evaluating trends in habitat condition, fisheries, tourism and governance, and charting a course for the next ten years.", sections: [
+      { id: "intro", heading: "A Decade of Managed Protection", html: P("The El Nido–Taytay Managed Resource Protected Area encompasses a mosaic of reefs, seagrass beds, mangroves and limestone islands of outstanding ecological and scenic value. This assessment looks back over ten years of management to ask a simple question: are the area's natural resources better protected today than a decade ago?") },
+      { id: "trends", heading: "Trends Over Ten Years", html: "<ul class='doc-list'><li><strong>Habitats:</strong> coral and seagrass condition held stable or improved within well-enforced zones, while pressure intensified near tourism hubs.</li><li><strong>Fisheries:</strong> fish biomass increased inside no-take areas, with measurable spillover benefits to adjacent fishing grounds.</li><li><strong>Tourism:</strong> visitor numbers grew sharply, raising both revenue and environmental pressure.</li><li><strong>Governance:</strong> coordination among the PCSD, LGUs and the protected-area management board strengthened over the period.</li></ul>" },
+      { id: "challenges", heading: "Emerging Challenges", html: P("Rapid tourism growth has become the defining management challenge. Wastewater, solid waste, anchor damage and crowding at marquee sites threaten to erode the very assets that draw visitors. Climate change adds a further layer of risk through coral bleaching and more intense storms.") },
+      { id: "future", heading: "The Next Ten Years", html: "<ol class='doc-list'><li>Adopt science-based carrying-capacity limits at key sites.</li><li>Invest in wastewater and solid-waste infrastructure.</li><li>Strengthen sustainable financing through tourism user fees reinvested in protection.</li><li>Deepen community participation in monitoring and enforcement.</li></ol>" },
+      { id: "refs", heading: "References & Citation", html: "<ul class='doc-list doc-refs'><li>Palawan Council for Sustainable Development. (2023). <em>El Nido Marine Reserve: 10-Year Assessment.</em></li></ul>" }
+    ]},
+    "resolution-15446": { title: "PCSD Resolution No. 15-446: Ecotourism Standards", publisher: "PCSD", year: "2015", category: "PCSD Issuances", tag: "blue", language: "English", fileType: "PDF", pages: 24, cover: "https://placehold.co/200x280/0D2F5E/D6E4F0?text=Resolution+15-446", abstract: "A PCSD resolution adopting standards and guidelines for ecotourism activities within the Environmentally Critical Areas Network, ensuring that tourism in Palawan remains compatible with conservation objectives under the Strategic Environmental Plan.", sections: [
+      { id: "whereas", heading: "Recitals", html: P("WHEREAS, the Strategic Environmental Plan for Palawan Act (RA 7611) mandates the sustainable development of the province through the Environmentally Critical Areas Network;") + P("WHEREAS, ecotourism has emerged as a significant economic activity in Palawan with the potential both to support conservation and, if unmanaged, to degrade the very resources it depends upon;") + P("WHEREAS, there is a need to establish clear standards to guide ecotourism operators, local governments and communities;") },
+      { id: "standards", heading: "Ecotourism Standards Adopted", html: "<ul class='doc-list'><li>Ecotourism activities shall be sited and conducted in accordance with ECAN zoning, with the most sensitive core zones reserved for strict protection.</li><li>Carrying-capacity assessments shall guide visitor numbers at sensitive sites.</li><li>Operators shall adopt low-impact practices for waste, water and energy.</li><li>Local communities and Indigenous Peoples shall share in the benefits of ecotourism.</li><li>Interpretation and education shall be integral to the visitor experience.</li></ul>" },
+      { id: "implementation", heading: "Implementation", html: P("The PCSD Staff, in coordination with local government units and the Department of Tourism, shall incorporate these standards into the SEP clearance process for tourism-related projects, and shall monitor compliance. Non-compliance may result in the suspension or revocation of clearances.") },
+      { id: "refs", heading: "References & Citation", html: "<ul class='doc-list doc-refs'><li>Palawan Council for Sustainable Development. (2015). <em>PCSD Resolution No. 15-446 — Ecotourism Standards.</em></li></ul>" }
+    ]},
+    "sep-guidelines": { title: "SEP Implementation Guidelines and Regulations", publisher: "PCSD", year: "2020", category: "PCSD Issuances", tag: "blue", language: "English", fileType: "PDF", pages: 58, cover: "https://placehold.co/200x280/1A4F8A/D6E4F0?text=SEP+Implementation+Guide", abstract: "Consolidated implementing rules and regulations operationalizing the Strategic Environmental Plan for Palawan Act, including the SEP Clearance system, ECAN zone management, and the procedures by which the PCSD reviews activities affecting Palawan's environment.", sections: [
+      { id: "purpose", heading: "Purpose & Coverage", html: P("These Guidelines are issued pursuant to RA 7611 to provide a clear, predictable and transparent framework for the implementation of the Strategic Environmental Plan. They apply to all activities, projects and undertakings within the Province of Palawan that may affect the environment.") },
+      { id: "clearance", heading: "The SEP Clearance System", html: P("The SEP Clearance is a regulatory instrument issued by the PCSD certifying that a proposed activity is consistent with the Strategic Environmental Plan and ECAN zoning. It is distinct from, and complementary to, the Environmental Compliance Certificate issued under the national EIS system.") + "<div class='doc-callout'>" + P("<strong>Who needs a SEP Clearance?</strong> Any person, corporation or entity intending to undertake a project or activity in Palawan that may affect the environment must secure a SEP Clearance prior to implementation.") + "</div>" },
+      { id: "procedure", heading: "Application Procedure", html: "<ol class='doc-list'><li>Submission of application with project description and supporting documents.</li><li>Screening to determine ECAN zone and level of review required.</li><li>Technical evaluation and, where warranted, field validation.</li><li>Action by the Council or its authorized officers — approval, approval with conditions, or denial.</li><li>Monitoring of compliance with clearance conditions.</li></ol>" },
+      { id: "refs", heading: "References & Citation", html: "<ul class='doc-list doc-refs'><li>Palawan Council for Sustainable Development. (2020). <em>SEP Implementation Guidelines and Regulations.</em></li></ul>" }
+    ]},
+    "admin-orders": { title: "PCSD Administrative Orders Compendium 2010–2023", publisher: "PCSD", year: "2023", category: "PCSD Issuances", tag: "gold", language: "English", fileType: "PDF", pages: 210, cover: "https://placehold.co/200x280/B87B08/FFF3CC?text=Admin+Orders+Compendium", abstract: "A consolidated reference of administrative orders issued by the Palawan Council for Sustainable Development from 2010 to 2023, compiled to support researchers, local governments and the public in navigating PCSD regulatory issuances.", sections: [
+      { id: "intro", heading: "About This Compendium", html: P("Administrative Orders translate Council resolutions and the provisions of the Strategic Environmental Plan into operational rules. Over more than a decade, the PCSD has issued numerous orders governing matters from ECAN zoning procedures to wildlife handling and clearance fees.") + P("This compendium gathers those issuances into a single, searchable reference. Each entry includes the order number, subject and year of issuance.") },
+      { id: "themes", heading: "Major Thematic Areas", html: "<ul class='doc-list'><li><strong>ECAN management</strong> — zoning classification, mapping and boundary procedures.</li><li><strong>Regulatory processes</strong> — SEP clearance procedures, fees and documentary requirements.</li><li><strong>Wildlife</strong> — handling, transport, and disposition of confiscated wildlife.</li><li><strong>Resource use</strong> — guidelines on specific extractive and commercial activities.</li><li><strong>Institutional matters</strong> — delegation of authority and internal procedures.</li></ul>" },
+      { id: "howtouse", heading: "How to Use", html: P("Researchers should cite individual administrative orders by their original number and date rather than this compendium as a whole. Where an order has been amended or superseded, the most recent issuance prevails. For certified true copies, contact the PCSD Records Section.") },
+      { id: "refs", heading: "References & Citation", html: "<ul class='doc-list doc-refs'><li>Palawan Council for Sustainable Development. (2023). <em>PCSD Administrative Orders Compendium 2010–2023.</em></li></ul>" }
+    ]},
+    "biosphere-plan": { title: "Palawan Biosphere Reserve Management Plan", publisher: "PCSD / UNESCO", year: "2018", category: "Biodiversity", tag: "green", language: "English", fileType: "PDF", pages: 156, cover: "https://placehold.co/200x280/2A7A35/D6F0DC?text=Biosphere+Reserve+Plan", abstract: "The management framework for the Palawan Biosphere Reserve, designated under UNESCO's Man and the Biosphere Programme in 1990. The Plan articulates how conservation, sustainable development and scientific research are balanced across the entire province.", sections: [
+      { id: "designation", heading: "A Province-Wide Biosphere Reserve", html: P("In 1990, UNESCO designated the whole of Palawan as a Biosphere Reserve under its Man and the Biosphere (MAB) Programme — recognition of the province's exceptional biodiversity and of the model of governance embodied in the Strategic Environmental Plan.") + P("Biosphere reserves are 'learning places for sustainable development' where the relationship between people and nature is actively managed and studied.") },
+      { id: "functions", heading: "The Three Functions", html: "<ul class='doc-list'><li><strong>Conservation</strong> — protecting genetic resources, species, ecosystems and landscapes.</li><li><strong>Development</strong> — fostering economic and human development that is socio-culturally and ecologically sustainable.</li><li><strong>Logistic support</strong> — supporting research, monitoring, education and information exchange.</li></ul>" + P("These functions map closely onto the ECAN strategy, with core, buffer and transition areas mirroring the reserve's zonation.") },
+      { id: "zonation", heading: "Zonation", html: "<table class='doc-table'><thead><tr><th>Zone</th><th>Purpose</th></tr></thead><tbody><tr><td>Core area</td><td>Strict protection of ecosystems and species</td></tr><tr><td>Buffer zone</td><td>Activities compatible with conservation — research, education, low-impact use</td></tr><tr><td>Transition area</td><td>Sustainable human settlement and economic activity</td></tr></tbody></table>" },
+      { id: "refs", heading: "References & Citation", html: "<ul class='doc-list doc-refs'><li>PCSD &amp; UNESCO. (2018). <em>Palawan Biosphere Reserve Management Plan.</em></li></ul>" }
+    ]}
+  };
+  window.PCSD_BOOK_ORDER = ["ra-7611", "biodiversity-2023", "annual-2023", "ra-9147", "sdg-roadmap", "mangrove", "ipra", "coral-bacuit", "el-nido", "resolution-15446", "sep-guidelines", "admin-orders", "biosphere-plan"];
+  // Curated groupings for the homepage featured tabs
+  window.PCSD_FEATURED = {
+    "new": ["el-nido", "biodiversity-2023", "annual-2023", "admin-orders"],
+    "trending": ["ra-7611", "biodiversity-2023", "sdg-roadmap", "coral-bacuit"],
+    "issuances": ["annual-2023", "resolution-15446", "sep-guidelines", "admin-orders"]
+  };
+})();
+</script>
+
+<!-- ============ APP LOGIC ============ -->
+<script>
+(function () {
+  "use strict";
+  var KEY_BOOKMARKS = "pcsd_bookmarks", KEY_RECENT = "pcsd_recent", KEY_DOWNLOADS = "pcsd_downloads", KEY_USER = "pcsd_user";
+
+  function getJSON(key, fb) { try { var v = localStorage.getItem(key); return v ? JSON.parse(v) : fb; } catch (e) { return fb; } }
+  function setJSON(key, val) { try { localStorage.setItem(key, JSON.stringify(val)); } catch (e) {} }
+  function getBookmarks() { return getJSON(KEY_BOOKMARKS, []); }
+  function getRecent() { return getJSON(KEY_RECENT, []); }
+  function getDownloads() { return getJSON(KEY_DOWNLOADS, []); }
+  function getUser() { try { return localStorage.getItem(KEY_USER) || null; } catch (e) { return null; } }
+  function setUser(name) { try { name ? localStorage.setItem(KEY_USER, name) : localStorage.removeItem(KEY_USER); } catch (e) {} }
+  function tagFor(b) { return b.tag === "gold" ? "tag-gold" : (b.tag === "green" ? "tag-green" : "tag-blue"); }
+
+  /* ---- routing ---- */
+  function showPage(id) {
+    document.querySelectorAll(".page").forEach(function (p) { p.classList.remove("active"); });
+    var t = document.getElementById(id);
+    if (t) { t.classList.add("active"); window.scrollTo({ top: 0, behavior: "smooth" }); }
+    var map = { "page-home": "home", "page-about": "about", "page-books": "books", "page-contact": "contact" };
+    document.querySelectorAll(".nav-links .nav-link").forEach(function (a) {
+      a.classList.toggle("active", a.getAttribute("data-page") === map[id]);
+    });
+    if (id === "page-dashboard") renderDashboard();
+    updateProgressBar();
+  }
+  function goHome() { showPage("page-home"); }
+  function goPage(p) { showPage("page-" + p); }
+  window.showPage = showPage; window.goHome = goHome; window.goPage = goPage;
+
+  /* ---- book card ---- */
+  function bookCardHTML(id) {
+    var b = window.PCSD_BOOKS[id];
+    if (!b) return "";
+    var saved = getBookmarks().indexOf(id) !== -1;
+    return '<div class="book-card" data-book="' + id + '">' +
+      '<div class="book-cover" data-open="' + id + '"><img src="' + b.cover + '" alt="' + b.title + '" loading="lazy"></div>' +
+      '<div class="book-info"><span class="book-tag ' + tagFor(b) + '">' + b.category + '</span>' +
+      '<div class="book-title" data-open="' + id + '">' + b.title + '</div>' +
+      '<div class="book-meta">' + b.publisher + ' &middot; ' + b.year + ' &middot; ' + b.fileType + '</div></div>' +
+      '<div class="book-actions"><button class="btn-read" data-open="' + id + '">Read Now</button>' +
+      '<button class="btn-bookmark' + (saved ? " saved" : "") + '" data-bookmark="' + id + '" title="Bookmark">' + (saved ? "★" : "☆") + '</button></div></div>';
+  }
+
+  function renderBooksGrid() {
+    var grid = document.getElementById("books-grid");
+    if (grid) grid.innerHTML = window.PCSD_BOOK_ORDER.map(bookCardHTML).join("");
+    var rc = document.getElementById("result-count");
+    if (rc) rc.textContent = window.PCSD_BOOK_ORDER.length;
+  }
+
+  function renderFeatured() {
+    ["new", "trending", "issuances"].forEach(function (key) {
+      var panel = document.getElementById("tab-" + key);
+      if (panel) panel.innerHTML = '<div class="book-grid-4">' + window.PCSD_FEATURED[key].map(bookCardHTML).join("") + '</div>';
+    });
+  }
+
+  /* ---- reader ---- */
+  function recordRecent(id) {
+    var list = getRecent().filter(function (x) { return x !== id; });
+    list.unshift(id);
+    if (list.length > 16) list = list.slice(0, 16);
+    setJSON(KEY_RECENT, list);
+  }
+
+  function openBook(id) {
+    var book = window.PCSD_BOOKS[id];
+    if (!book) { showToast("Publication not available", "default"); return; }
+    recordRecent(id);
+    renderReader(id, book);
+    showPage("page-reader");
+  }
+  window.openBook = openBook;
+
+  function renderReader(id, book) {
+    var saved = getBookmarks().indexOf(id) !== -1;
+    document.getElementById("reader-title").textContent = book.title;
+    document.getElementById("reader-cover-img").innerHTML = '<img src="' + book.cover + '" alt="' + book.title + '" />';
+    document.getElementById("reader-author").textContent = book.publisher;
+    document.getElementById("reader-year").textContent = book.year + " · " + book.pages + " pages";
+    document.getElementById("reader-badge").textContent = book.category;
+
+    var bm = document.getElementById("bookmark-btn");
+    bm.className = "reader-action-btn bookmark" + (saved ? " saved" : "");
+    bm.textContent = saved ? "★ Bookmarked" : "☆ Bookmark";
+    bm.onclick = function () { toggleBookmark(id); };
+    document.getElementById("download-btn").onclick = function () { downloadBook(id); };
+    document.getElementById("share-btn").onclick = function () { shareBook(id); };
+
+    var toc = '<h4>Contents</h4><ul>';
+    var article = '<div class="doc-abstract"><span class="lbl">Abstract</span><p>' + book.abstract + '</p></div>';
+    book.sections.forEach(function (sec, i) {
+      var secId = "sec-" + sec.id;
+      toc += '<li><a data-target="' + secId + '"' + (i === 0 ? ' class="active"' : "") + '>' + sec.heading + '</a></li>';
+      article += '<section id="' + secId + '"><h2>' + sec.heading + '</h2>' + sec.html + '</section>';
+    });
+    toc += '</ul>';
+    document.getElementById("toc-list").innerHTML = toc;
+    document.getElementById("reader-article").innerHTML = article;
+
+    var order = window.PCSD_BOOK_ORDER, pos = order.indexOf(id), html = "";
+    if (pos > 0) { var pv = order[pos - 1]; html += '<div class="reader-nav-card" data-open="' + pv + '"><div class="rn-label">← Previous</div><div class="rn-title">' + window.PCSD_BOOKS[pv].title + '</div></div>'; } else { html += "<div></div>"; }
+    if (pos < order.length - 1) { var nx = order[pos + 1]; html += '<div class="reader-nav-card next" data-open="' + nx + '"><div class="rn-label">Next →</div><div class="rn-title">' + window.PCSD_BOOKS[nx].title + '</div></div>'; } else { html += "<div></div>"; }
+    document.getElementById("reader-nav").innerHTML = html;
+
+    document.querySelectorAll("#toc-list a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        var el = document.getElementById(a.getAttribute("data-target"));
+        if (el) { var y = el.getBoundingClientRect().top + window.scrollY - 80; window.scrollTo({ top: y, behavior: "smooth" }); }
+      });
+    });
+  }
+
+  /* ---- bookmarks ---- */
+  function toggleBookmark(id) {
+    var list = getBookmarks(), i = list.indexOf(id), nowSaved;
+    if (i === -1) { list.push(id); nowSaved = true; } else { list.splice(i, 1); nowSaved = false; }
+    setJSON(KEY_BOOKMARKS, list);
+    showToast(nowSaved ? "Saved to your bookmarks" : "Removed from bookmarks", nowSaved ? "gold" : "default");
+    var bm = document.getElementById("bookmark-btn");
+    if (bm && document.getElementById("page-reader").classList.contains("active")) {
+      bm.className = "reader-action-btn bookmark" + (nowSaved ? " saved" : "");
+      bm.textContent = nowSaved ? "★ Bookmarked" : "☆ Bookmark";
+    }
+    document.querySelectorAll('[data-bookmark="' + id + '"]').forEach(function (b) {
+      b.classList.toggle("saved", nowSaved); b.textContent = nowSaved ? "★" : "☆";
+    });
+    if (document.getElementById("page-dashboard").classList.contains("active")) renderDashboard();
+  }
+  window.toggleBookmark = toggleBookmark;
+
+  /* ---- downloads ---- */
+  function downloadBook(id) {
+    var book = window.PCSD_BOOKS[id];
+    if (!book) return;
+    var body = '<!DOCTYPE html><html><head><meta charset="utf-8"><title>' + book.title + '</title><style>body{font-family:Georgia,serif;max-width:760px;margin:40px auto;padding:0 24px;color:#0D2240;line-height:1.7}h1{font-size:28px}h2{font-size:20px;margin-top:32px;border-bottom:1px solid #D6E4F0;padding-bottom:6px}h3{font-size:16px}.meta{color:#555;font-size:13px;margin-bottom:24px}blockquote{border-left:4px solid #D4920A;margin:0;padding:8px 18px;background:#f6f6f2;font-style:italic}table{border-collapse:collapse;width:100%}th,td{border:1px solid #ccc;padding:8px;text-align:left;font-size:14px}</style></head><body>';
+    body += "<h1>" + book.title + "</h1>";
+    body += '<div class="meta">PCSD E-Library — Published by ' + book.publisher + " · " + book.year + " · " + book.category + "</div>";
+    body += "<p><em>" + book.abstract + "</em></p>";
+    book.sections.forEach(function (sec) { body += "<h2>" + sec.heading + "</h2>" + sec.html; });
+    body += "<hr><p style='font-size:12px;color:#777'>Downloaded from PCSD E-Library · pcsd.gov.ph · Digitized public-domain government publication.</p></body></html>";
+    var blob = new Blob([body], { type: "text/html;charset=utf-8" });
+    var url = URL.createObjectURL(blob), a = document.createElement("a");
+    a.href = url; a.download = book.title.replace(/[^a-z0-9]+/gi, "_").replace(/^_+|_+$/g, "") + ".html";
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
+    var list = getDownloads().filter(function (d) { return d.id !== id; });
+    list.unshift({ id: id, date: new Date().toISOString() });
+    setJSON(KEY_DOWNLOADS, list);
+    showToast("Download started — saved to My Library", "success");
+    if (document.getElementById("page-dashboard").classList.contains("active")) renderDashboard();
+  }
+  window.downloadBook = downloadBook;
+
+  function shareBook(id) {
+    var book = window.PCSD_BOOKS[id], link = location.href.split("#")[0] + "#read=" + id;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(link).then(function () { showToast("Link copied to clipboard", "success"); }, function () { showToast("Share: " + book.title, "default"); });
+    } else { showToast("Share: " + book.title, "default"); }
+  }
+  window.shareBook = shareBook;
+
+  /* ---- toast ---- */
+  function showToast(msg, kind) {
+    var stack = document.getElementById("toast-stack");
+    if (!stack) return;
+    var el = document.createElement("div");
+    el.className = "toast " + (kind || "default");
+    el.innerHTML = '<span class="toast-icon">' + (kind === "gold" ? "★" : (kind === "success" ? "✓" : "ℹ")) + '</span><span>' + msg + '</span>';
+    stack.appendChild(el);
+    requestAnimationFrame(function () { el.classList.add("show"); });
+    setTimeout(function () { el.classList.remove("show"); setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 300); }, 2600);
+  }
+  window.pcsdToast = showToast;
+
+  /* ---- dashboard ---- */
+  function timeAgo(iso) {
+    var s = Math.floor((Date.now() - new Date(iso).getTime()) / 1000);
+    if (s < 60) return "just now";
+    var m = Math.floor(s / 60); if (m < 60) return m + (m === 1 ? " minute ago" : " minutes ago");
+    var h = Math.floor(m / 60); if (h < 24) return h + (h === 1 ? " hour ago" : " hours ago");
+    var d = Math.floor(h / 24); if (d < 30) return d + (d === 1 ? " day ago" : " days ago");
+    return new Date(iso).toLocaleDateString();
+  }
+  function emptyState(icon, title, msg, cta) {
+    return '<div class="dash-empty"><div class="dash-empty-icon">' + icon + '</div><h3>' + title + '</h3><p>' + msg + '</p><button class="btn-primary" data-page="books">' + cta + '</button></div>';
+  }
+  function renderDashboard() {
+    var user = getUser() || "Guest Researcher";
+    document.getElementById("user-initial").textContent = (user.trim().charAt(0) || "G").toUpperCase();
+    document.getElementById("user-name").textContent = user;
+    var bm = getBookmarks(), rc = getRecent(), dl = getDownloads();
+    document.getElementById("stat-bookmarked").textContent = bm.length;
+    document.getElementById("stat-recent").textContent = rc.length;
+    document.getElementById("stat-downloads").textContent = dl.length;
+    document.getElementById("count-bookmarked").textContent = bm.length;
+    document.getElementById("count-recent").textContent = rc.length;
+    document.getElementById("count-downloads").textContent = dl.length;
+
+    document.getElementById("bookmarked-panel").innerHTML = bm.length
+      ? '<div class="dash-grid">' + bm.map(bookCardHTML).join("") + '</div>'
+      : emptyState("📌", "No bookmarks yet", "Save publications you want to revisit. Tap the bookmark icon on any resource to add it here.", "Browse Publications");
+
+    document.getElementById("recent-panel").innerHTML = rc.length
+      ? '<div class="dash-grid">' + rc.map(bookCardHTML).join("") + '</div>'
+      : emptyState("👁", "Nothing viewed yet", "Publications you open will appear here so you can pick up where you left off.", "Start Reading");
+
+    var dlPanel = document.getElementById("downloads-panel");
+    if (dl.length) {
+      dlPanel.innerHTML = '<div class="dash-download-list">' + dl.map(function (d) {
+        var b = window.PCSD_BOOKS[d.id];
+        if (!b) return "";
+        return '<div class="dash-download-row"><div class="dash-dl-cover"><img src="' + b.cover + '" alt=""></div>' +
+          '<div class="dash-dl-info"><h4 data-open="' + d.id + '">' + b.title + '</h4>' +
+          '<div class="meta">' + b.fileType + ' · ' + b.publisher + ' · Downloaded ' + timeAgo(d.date) + '</div></div>' +
+          '<div class="dash-dl-actions"><button class="icon-btn" data-open="' + d.id + '" title="Read">📖</button>' +
+          '<button class="icon-btn" data-download="' + d.id + '" title="Download again">⬇</button>' +
+          '<button class="icon-btn" data-remove-dl="' + d.id + '" title="Remove">🗑</button></div></div>';
+      }).join("") + '</div>';
+    } else {
+      dlPanel.innerHTML = emptyState("⬇", "No downloads yet", "Download any publication as a readable file. Your downloads are listed here for offline reference.", "Find Something to Download");
+    }
+  }
+  window.renderDashboard = renderDashboard;
+
+  function removeDownload(id) {
+    setJSON(KEY_DOWNLOADS, getDownloads().filter(function (d) { return d.id !== id; }));
+    showToast("Removed from downloads", "default");
+    renderDashboard();
+  }
+
+  /* ---- progress bar + scrollspy ---- */
+  function updateProgressBar() {
+    var bar = document.getElementById("reading-progress");
+    if (!bar) return;
+    var onReader = document.getElementById("page-reader").classList.contains("active");
+    if (!onReader) { bar.style.width = "0%"; return; }
+    var h = document.documentElement;
+    var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight || 1);
+    bar.style.width = Math.max(0, Math.min(1, scrolled)) * 100 + "%";
+    var heads = document.querySelectorAll("#reader-article section"), current = null;
+    heads.forEach(function (sec) { if (sec.getBoundingClientRect().top <= 120) current = sec.id; });
+    if (current) document.querySelectorAll("#toc-list a").forEach(function (a) { a.classList.toggle("active", a.getAttribute("data-target") === current); });
+  }
+
+  function switchTab(key, btn) {
+    document.querySelectorAll(".tab-panel").forEach(function (p) { p.classList.remove("active"); });
+    document.querySelectorAll(".tab-btn").forEach(function (b) { b.classList.remove("active"); });
+    var panel = document.getElementById("tab-" + key);
+    if (panel) panel.classList.add("active");
+    if (btn) btn.classList.add("active");
+  }
+  function switchDashTab(name, btn) {
+    document.querySelectorAll(".dash-panel").forEach(function (p) { p.classList.remove("active"); });
+    document.querySelectorAll(".dash-tab").forEach(function (t) { t.classList.remove("active"); });
+    var panel = document.querySelector('[data-dash-panel="' + name + '"]');
+    if (panel) panel.classList.add("active");
+    if (btn) btn.classList.add("active");
+  }
+
+  /* ---- global delegation ---- */
+  document.addEventListener("click", function (e) {
+    var resetBtn = e.target.closest("#reset-filters-btn");
+    if (resetBtn) { e.preventDefault(); e.stopPropagation(); location.reload(); return; }
+
+    var nav = e.target.closest("[data-page]");
+    if (nav) { e.preventDefault(); goPage(nav.getAttribute("data-page")); var mm = document.getElementById("mobile-menu"); if (mm) mm.classList.remove("open"); return; }
+
+    var rmdl = e.target.closest("[data-remove-dl]");
+    if (rmdl) { e.stopPropagation(); removeDownload(rmdl.getAttribute("data-remove-dl")); return; }
+
+    var bmBtn = e.target.closest("[data-bookmark]");
+    if (bmBtn) { e.stopPropagation(); toggleBookmark(bmBtn.getAttribute("data-bookmark")); return; }
+
+    var dlBtn = e.target.closest("[data-download]");
+    if (dlBtn) { e.stopPropagation(); downloadBook(dlBtn.getAttribute("data-download")); return; }
+
+    var opener = e.target.closest("[data-open]");
+    if (opener) { var id = opener.getAttribute("data-open"); if (window.PCSD_BOOKS[id]) { openBook(id); return; } }
+
+    var tabBtn = e.target.closest(".tab-btn");
+    if (tabBtn) { switchTab(tabBtn.getAttribute("data-tab"), tabBtn); return; }
+
+    var dashTab = e.target.closest(".dash-tab");
+    if (dashTab) { switchDashTab(dashTab.getAttribute("data-dash-tab"), dashTab); return; }
+
+    var faq = e.target.closest(".faq-q");
+    if (faq) { faq.closest(".faq-item").classList.toggle("open"); return; }
+
+    var pill = e.target.closest(".filter-pill");
+    if (pill) { var c = pill.closest(".filter-pills"); c.querySelectorAll(".filter-pill").forEach(function (p) { p.classList.remove("active"); }); pill.classList.add("active"); return; }
+
+    if (e.target.closest("#signout-btn")) { setUser(null); showToast("You have been signed out", "default"); showPage("page-home"); return; }
+  });
+
+  document.addEventListener("submit", function (e) {
+    if (e.target.id === "contact-form") { e.preventDefault(); showToast("Message sent! We'll be in touch.", "success"); e.target.reset(); }
+  });
+
+  window.addEventListener("scroll", function () {
+    var nav = document.getElementById("site-nav");
+    if (nav) nav.classList.toggle("scrolled", window.scrollY > 10);
+    updateProgressBar();
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    renderFeatured();
+    renderBooksGrid();
+    var ham = document.getElementById("hamburger");
+    if (ham) ham.addEventListener("click", function () { document.getElementById("mobile-menu").classList.toggle("open"); });
+    var m = location.hash.match(/read=([\w-]+)/);
+    if (m && window.PCSD_BOOKS[m[1]]) openBook(m[1]);
+    
+    // Login flow
+    var signInBtn = document.getElementById("sign-in-btn");
+    if (signInBtn) signInBtn.addEventListener("click", function (e) { e.preventDefault(); handleSignIn(); });
+    var createBtn = document.getElementById("create-account-btn");
+    if (createBtn) createBtn.addEventListener("click", function (e) { e.preventDefault(); showToast("Account creation coming soon", "default"); });
+    var togglePwBtn = document.getElementById("toggle-pw-btn");
+    if (togglePwBtn) togglePwBtn.addEventListener("click", togglePasswordVisibility);
+  });
+
+  function handleSignIn() {
+    var email = document.getElementById("login-email").value.trim();
+    var password = document.getElementById("login-password").value.trim();
+    if (!email || !password) { showToast("Please enter email and password", "default"); return; }
+    setUser(email.split("@")[0]);
+    showToast("Signed in successfully", "success");
+    setTimeout(function () { goPage("dashboard"); }, 500);
+  }
+
+  function togglePasswordVisibility() {
+    var input = document.getElementById("login-password");
+    if (input.type === "password") { input.type = "text"; } else { input.type = "password"; }
+  }
+})();
+</script>
+
+</body>
+</html>
